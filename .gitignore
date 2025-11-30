@@ -41,3 +41,4 @@ yarn-error.log*
 # Test files
 sandbox.html
 container-query-notes.md
+_dump/
