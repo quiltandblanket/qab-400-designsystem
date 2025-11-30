@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## v0.0.3 - 2025-12-01
+
+### Added
+- New experimental playground `experimental.html` featuring 20 advanced interactive demos (color picker, drag/reorder, canvas drawing, code editor, audio visualizer, swipe cards, password strength meter, emoji picker, particle system, 3D flip card, parallax scroll, morphing button, animated counter, dual range slider, ripple effect, skeleton loader, gradient builder, notification stack, typewriter effect, and infinite scroll).
+- Corresponding `assets/js/experimental.js` to power all experimental interactive components.
+
+### Changed
+- Ratio utilities now use a wrapper-based container-unit approach (`.tile-wrapper` as the container, `.tile` using `min-height: cqw`) to deliver "soft" aspect ratios that expand gracefully with content.
+- Updated `VERSION` to v0.0.3.
+
 ## v0.0.2 - 2025-11-30
 
 ### Added

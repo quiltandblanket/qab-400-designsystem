@@ -129,732 +129,694 @@
         </div>
       </section>
 
+      <!--
+      The following section contains mainly experimental UI elements suggested by AI tools and not yet further refined.
+      -->
+
       <section>
         <header class="container section-header w34">
           <h2>Diversity of UI Elements</h2>
           <p>
-            The cards in this section show a range of UI elements that may come in handy for various use cases. At the same time it is a way to furtehr develop the basics of teh QAB 400 Design System.
+            The tiles in this section show a range of UI elements that may come in handy for various use cases. At the
+            same time it is a way to furtehr develop the basics of teh QAB 400 Design System.
           </p>
         </header>
+
         <div class="container grid grid-200">
-
-          <div class="tile ratio-100 tile-400">
-            <h3>Form element button.</h3>
-            <button type="button" class="btn btn-400">Button</button>
-            <p class="p-200">
-              This is an actual button, based on the
-              <code>&lt;button&gt;</code>
-              HTML element.
-            </p>
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-100 tile-400">
+              <h3>Form element button.</h3>
+              <button type="button" class="btn btn-400">Button</button>
+              <p class="p-200">
+                This is an actual button, based on the
+                <code>&lt;button&gt;</code>
+                HTML element.
+              </p>
+            </div>
           </div>
 
-          <div class="tile ratio-200 tile-400">
-            <h3>Hyperlink styled as a button.</h3>
-            <a class="btn btn-400" href="#">Button</a>
-            <p class="p-200">
-              This is a hyperlink styled as a button, based on the
-              <code>&lt;a&gt;</code>
-              HTML element.
-            </p>
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-200 tile-400">
+              <h3>Hyperlink styled as a button.</h3>
+              <a class="btn btn-400" href="#">Button</a>
+              <p class="p-200">
+                This is a hyperlink styled as a button, based on the
+                <code>&lt;a&gt;</code>
+                HTML element.
+              </p>
+            </div>
           </div>
 
-          <div class="tile ratio-400 tile-400">
-            <form class="drop-zone" action="#" method="post" enctype="multipart/form-data">
-              <label for="file-upload" class="drop-zone__label">
-                <p>Drop file here or click to upload</p>
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-400 tile-400">
+              <form class="drop-zone" action="#" method="post" enctype="multipart/form-data">
+                <label for="file-upload" class="drop-zone__label">
+                  <p>Drop file here or click to upload</p>
+                </label>
+                <input id="file-upload" type="file" name="file" class="drop-zone__input-hidden" />
+              </form>
+            </div>
+          </div>
+
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-200 tile-400">
+              <h3>Toggle pill button.</h3>
+              <button type="button" class="toggle-btn" aria-pressed="false">
+                <span class="toggle-track">
+                  <span class="toggle-knob"></span>
+                </span>
+                <span class="toggle-label p-200">Email notifications</span>
+              </button>
+              <p class="p-200">
+                A compact toggle switch is useful for on/off preferences such as notifications or dark mode.
+              </p>
+            </div>
+          </div>
+
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-200 tile-400">
+              <h3>Informational notification banner.</h3>
+              <div class="alert-400" role="status">
+                <p class="alert-400__title">Update available</p>
+                <p class="alert-400__body p-200">
+                  Version 4.0 includes improved accessibility defaults and new layout tools.
+                </p>
+              </div>
+              <p class="p-200">
+                Inline notifications surface important but non-blocking information without interrupting the flow.
+              </p>
+            </div>
+          </div>
+
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-100 tile-400">
+              <h3>Progress indicator.</h3>
+              <div class="progress-400" aria-label="Profile completeness">
+                <div class="progress-400__track">
+                  <div class="progress-400__bar" style="--progress-value: 0.6"></div>
+                </div>
+                <span class="progress-400__label p-200">60% complete</span>
+              </div>
+              <p class="p-200">
+                Progress bars communicate completion status for tasks like onboarding flows or file uploads.
+              </p>
+            </div>
+          </div>
+
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-100 tile-400">
+              <h3>Pagination controls.</h3>
+              <nav class="pagination-400" aria-label="Sample pagination">
+                <button type="button" class="btn btn-200">Prev</button>
+                <div class="pagination-400__pages">
+                  <button type="button" class="pagination-400__page is-active" aria-current="page">1</button>
+                  <button type="button" class="pagination-400__page">2</button>
+                  <button type="button" class="pagination-400__page">3</button>
+                  <span class="pagination-400__ellipsis" aria-hidden="true">…</span>
+                  <button type="button" class="pagination-400__page">10</button>
+                </div>
+                <button type="button" class="btn btn-200">Next</button>
+              </nav>
+              <p class="p-200">
+                Pagination patterns help users browse long result lists while keeping navigation predictable.
+              </p>
+            </div>
+          </div>
+
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-200 tile-400">
+              <h3>Filter pill group.</h3>
+              <div class="pill-group-400" role="list">
+                <button type="button" class="pill-400 pill-400--active" role="listitem" aria-pressed="true">All</button>
+                <button type="button" class="pill-400" role="listitem">Design</button>
+                <button type="button" class="pill-400" role="listitem">Development</button>
+                <button type="button" class="pill-400" role="listitem">Research</button>
+              </div>
+              <p class="p-200">
+                Filter pills are ideal for toggling categories or quick presets in dashboards and galleries.
+              </p>
+            </div>
+          </div>
+
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-100 tile-400">
+              <h3>Breadcrumb navigation.</h3>
+              <nav class="breadcrumb-400" aria-label="Breadcrumb">
+                <ol>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Components</a></li>
+                  <li aria-current="page">Buttons</li>
+                </ol>
+              </nav>
+              <p class="p-200">
+                Breadcrumbs communicate hierarchy and offer quick navigation back to higher level sections.
+              </p>
+            </div>
+          </div>
+
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-100 tile-400">
+              <h3>Key metric highlight.</h3>
+              <div class="stat-400">
+                <p class="stat-400__label p-200">Conversion rate</p>
+                <p class="stat-400__value">4.8%</p>
+                <p class="stat-400__trend p-200">+0.4 pts this week</p>
+              </div>
+              <p class="p-200">
+                Statistic tiles draw attention to critical KPIs on overview pages and executive dashboards.
+              </p>
+            </div>
+          </div>
+
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-200 tile-400">
+              <h3>User profile summary.</h3>
+              <div class="profile-400">
+                <div class="profile-400__avatar" aria-hidden="true">EH</div>
+                <div>
+                  <p class="profile-400__name">Enno Hyttrek</p>
+                  <p class="profile-400__role p-200">Design system lead</p>
+                </div>
+              </div>
+              <p class="p-200">
+                Compact profile patterns bundle identity, role and status for comments, ownership or presence.
+              </p>
+            </div>
+          </div>
+
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-100 tile-400">
+              <h3>Keyboard shortcut hint.</h3>
+              <div class="shortcut-400" aria-label="Keyboard shortcut to save">
+                <span class="shortcut-400__key">Ctrl</span>
+                <span class="shortcut-400__plus">+</span>
+                <span class="shortcut-400__key">S</span>
+              </div>
+              <p class="p-200">Shortcut hints explain power user paths while remaining discoverable for new users.</p>
+            </div>
+          </div>
+
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-200 tile-400">
+              <h3>Upcoming event date.</h3>
+              <div class="date-card-400" aria-label="Event date">
+                <div class="date-card-400__month p-200">SEP</div>
+                <div class="date-card-400__day">24</div>
+                <div class="date-card-400__weekday p-200">Tue</div>
+              </div>
+              <p class="p-200">Date badges work well for calendars, event listings and editorial teasers.</p>
+            </div>
+          </div>
+
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-200 tile-400">
+              <h3>Accordion item.</h3>
+              <div class="accordion-400">
+                <button type="button" class="accordion-400__button" aria-expanded="false">
+                  <span class="accordion-400__label">What is QAB 400?</span>
+                  <span class="accordion-400__icon" aria-hidden="true">+</span>
+                </button>
+                <div class="accordion-400__panel p-200" hidden>
+                  QAB 400 is the base layer for consistent UI across Quilt And Blanket products.
+                </div>
+              </div>
+              <p class="p-200">Accordions reveal supporting content on demand and keep dense pages scannable.</p>
+            </div>
+          </div>
+
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-100 tile-400">
+              <h3>Star rating input.</h3>
+              <div class="rating-400" role="radiogroup" aria-label="Rate the experience">
+                <button type="button" class="rating-400__star" aria-pressed="false" data-value="1">★</button>
+                <button type="button" class="rating-400__star" aria-pressed="false" data-value="2">★</button>
+                <button type="button" class="rating-400__star" aria-pressed="false" data-value="3">★</button>
+                <button type="button" class="rating-400__star" aria-pressed="false" data-value="4">★</button>
+                <button type="button" class="rating-400__star" aria-pressed="false" data-value="5">★</button>
+              </div>
+              <p class="p-200">Interactive ratings help collect quick feedback without long forms.</p>
+            </div>
+          </div>
+
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-100 tile-400">
+              <h3>Quantity stepper.</h3>
+              <div class="stepper-400" aria-label="Select quantity" data-min="0" data-max="9">
+                <button type="button" class="stepper-400__btn stepper-400__btn--minus" aria-label="Decrease quantity">
+                  −
+                </button>
+                <div class="stepper-400__value">1</div>
+                <button type="button" class="stepper-400__btn stepper-400__btn--plus" aria-label="Increase quantity">
+                  +
+                </button>
+              </div>
+              <p class="p-200">Steppers are great for small numeric tweaks like number of seats or items.</p>
+            </div>
+          </div>
+
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-100 tile-400">
+              <h3>Dismissible tag.</h3>
+              <div class="tag-400" aria-label="Active filter: Accessibility">
+                <span class="tag-400__label p-200">Accessibility</span>
+                <button type="button" class="tag-400__close" aria-label="Remove filter">×</button>
+              </div>
+              <p class="p-200">Tags with remove controls let users quickly adjust active filters or interests.</p>
+            </div>
+          </div>
+
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-200 tile-400">
+              <h3>Search with clear action.</h3>
+              <form class="search-400" role="search" action="#" onsubmit="return false;">
+                <input
+                  type="search"
+                  class="search-400__input"
+                  placeholder="Search components"
+                  aria-label="Search components"
+                />
+                <button type="button" class="search-400__clear" aria-label="Clear search">×</button>
+              </form>
+              <p class="p-200">Adding a clear affordance speeds up repeated search iterations.</p>
+            </div>
+          </div>
+
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-200 tile-400">
+              <h3>Toast notification.</h3>
+              <div class="toast-400 toast-400--visible" role="status" aria-live="polite">
+                <p class="toast-400__body p-200">Draft saved just now.</p>
+                <button type="button" class="toast-400__dismiss" aria-label="Dismiss notification">Dismiss</button>
+              </div>
+              <p class="p-200">Toasts are ideal for ephemeral, non-blocking status updates.</p>
+            </div>
+          </div>
+
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-100 tile-400">
+              <h3>Play / pause micro-control.</h3>
+              <button type="button" class="media-toggle-400" aria-pressed="false" aria-label="Play demo">
+                <span class="media-toggle-400__icon" aria-hidden="true">▶</span>
+                <span class="media-toggle-400__label p-200">Play demo</span>
+              </button>
+              <p class="p-200">Inline media toggles give quick control without exposing full player chrome.</p>
+            </div>
+          </div>
+
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-200 tile-400">
+              <h3>Inline validation message.</h3>
+              <label class="field-400">
+                <span class="field-400__label p-200">Email address</span>
+                <input type="email" class="field-400__input" placeholder="name@example.com" required />
+                <span class="field-400__message p-200" aria-live="polite"></span>
               </label>
-              <input id="file-upload" type="file" name="file" class="drop-zone__input-hidden" />
-            </form>
-          </div>
-
-          <div class="tile ratio-200 tile-400">
-            <h3>Toggle pill button.</h3>
-            <button type="button" class="toggle-btn" aria-pressed="false">
-              <span class="toggle-track">
-                <span class="toggle-knob"></span>
-              </span>
-              <span class="toggle-label p-200">Email notifications</span>
-            </button>
-            <p class="p-200">
-              A compact toggle switch is useful for on/off preferences such as notifications or dark mode.
-            </p>
-          </div>
-
-          <div class="tile ratio-200 tile-400">
-            <h3>Informational notification banner.</h3>
-            <div class="alert-400" role="status">
-              <p class="alert-400__title">Update available</p>
-              <p class="alert-400__body p-200">Version 4.0 includes improved accessibility defaults and new layout tools.</p>
+              <p class="p-200">Inline validation reduces friction by catching small mistakes early.</p>
             </div>
-            <p class="p-200">
-              Inline notifications surface important but non-blocking information without interrupting the flow.
-            </p>
           </div>
 
-          <div class="tile ratio-100 tile-400">
-            <h3>Progress indicator.</h3>
-            <div class="progress-400" aria-label="Profile completeness">
-              <div class="progress-400__track">
-                <div class="progress-400__bar" style="--progress-value: 0.6"></div>
-              </div>
-              <span class="progress-400__label p-200">60% complete</span>
-            </div>
-            <p class="p-200">
-              Progress bars communicate completion status for tasks like onboarding flows or file uploads.
-            </p>
-          </div>
-
-          <div class="tile ratio-100 tile-400">
-            <h3>Pagination controls.</h3>
-            <nav class="pagination-400" aria-label="Sample pagination">
-              <button type="button" class="btn btn-200">Prev</button>
-              <div class="pagination-400__pages">
-                <button type="button" class="pagination-400__page is-active" aria-current="page">1</button>
-                <button type="button" class="pagination-400__page">2</button>
-                <button type="button" class="pagination-400__page">3</button>
-                <span class="pagination-400__ellipsis" aria-hidden="true">…</span>
-                <button type="button" class="pagination-400__page">10</button>
-              </div>
-              <button type="button" class="btn btn-200">Next</button>
-            </nav>
-            <p class="p-200">
-              Pagination patterns help users browse long result lists while keeping navigation predictable.
-            </p>
-          </div>
-
-          <div class="tile ratio-200 tile-400">
-            <h3>Filter pill group.</h3>
-            <div class="pill-group-400" role="list">
-              <button type="button" class="pill-400 pill-400--active" role="listitem" aria-pressed="true">All</button>
-              <button type="button" class="pill-400" role="listitem">Design</button>
-              <button type="button" class="pill-400" role="listitem">Development</button>
-              <button type="button" class="pill-400" role="listitem">Research</button>
-            </div>
-            <p class="p-200">
-              Filter pills are ideal for toggling categories or quick presets in dashboards and galleries.
-            </p>
-          </div>
-
-          <div class="tile ratio-100 tile-400">
-            <h3>Breadcrumb navigation.</h3>
-            <nav class="breadcrumb-400" aria-label="Breadcrumb">
-              <ol>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Components</a></li>
-                <li aria-current="page">Buttons</li>
-              </ol>
-            </nav>
-            <p class="p-200">
-              Breadcrumbs communicate hierarchy and offer quick navigation back to higher level sections.
-            </p>
-          </div>
-
-          <div class="tile ratio-100 tile-400">
-            <h3>Key metric highlight.</h3>
-            <div class="stat-400">
-              <p class="stat-400__label p-200">Conversion rate</p>
-              <p class="stat-400__value">4.8%</p>
-              <p class="stat-400__trend p-200">+0.4 pts this week</p>
-            </div>
-            <p class="p-200">
-              Statistic tiles draw attention to critical KPIs on overview pages and executive dashboards.
-            </p>
-          </div>
-
-          <div class="tile ratio-200 tile-400">
-            <h3>User profile summary.</h3>
-            <div class="profile-400">
-              <div class="profile-400__avatar" aria-hidden="true">EH</div>
-              <div>
-                <p class="profile-400__name">Enno Hyttrek</p>
-                <p class="profile-400__role p-200">Design system lead</p>
-              </div>
-            </div>
-            <p class="p-200">
-              Compact profile patterns bundle identity, role and status for comments, ownership or presence.
-            </p>
-          </div>
-
-          <div class="tile ratio-100 tile-400">
-            <h3>Keyboard shortcut hint.</h3>
-            <div class="shortcut-400" aria-label="Keyboard shortcut to save">
-              <span class="shortcut-400__key">Ctrl</span>
-              <span class="shortcut-400__plus">+</span>
-              <span class="shortcut-400__key">S</span>
-            </div>
-            <p class="p-200">
-              Shortcut hints explain power user paths while remaining discoverable for new users.
-            </p>
-          </div>
-
-          <div class="tile ratio-200 tile-400">
-            <h3>Upcoming event date.</h3>
-            <div class="date-card-400" aria-label="Event date">
-              <div class="date-card-400__month p-200">SEP</div>
-              <div class="date-card-400__day">24</div>
-              <div class="date-card-400__weekday p-200">Tue</div>
-            </div>
-            <p class="p-200">
-              Date badges work well for calendars, event listings and editorial teasers.
-            </p>
-          </div>
-
-          <div class="tile ratio-200 tile-400">
-            <h3>Accordion item.</h3>
-            <div class="accordion-400">
-              <button type="button" class="accordion-400__button" aria-expanded="false">
-                <span class="accordion-400__label">What is QAB 400?</span>
-                <span class="accordion-400__icon" aria-hidden="true">+</span>
-              </button>
-              <div class="accordion-400__panel p-200" hidden>
-                QAB 400 is the base layer for consistent UI across Quilt And Blanket products.
-              </div>
-            </div>
-            <p class="p-200">
-              Accordions reveal supporting content on demand and keep dense pages scannable.
-            </p>
-          </div>
-
-          <div class="tile ratio-100 tile-400">
-            <h3>Star rating input.</h3>
-            <div class="rating-400" role="radiogroup" aria-label="Rate the experience">
-              <button type="button" class="rating-400__star" aria-pressed="false" data-value="1">★</button>
-              <button type="button" class="rating-400__star" aria-pressed="false" data-value="2">★</button>
-              <button type="button" class="rating-400__star" aria-pressed="false" data-value="3">★</button>
-              <button type="button" class="rating-400__star" aria-pressed="false" data-value="4">★</button>
-              <button type="button" class="rating-400__star" aria-pressed="false" data-value="5">★</button>
-            </div>
-            <p class="p-200">
-              Interactive ratings help collect quick feedback without long forms.
-            </p>
-          </div>
-
-          <div class="tile ratio-100 tile-400">
-            <h3>Quantity stepper.</h3>
-            <div class="stepper-400" aria-label="Select quantity" data-min="0" data-max="9">
-              <button type="button" class="stepper-400__btn stepper-400__btn--minus" aria-label="Decrease quantity">−</button>
-              <div class="stepper-400__value">1</div>
-              <button type="button" class="stepper-400__btn stepper-400__btn--plus" aria-label="Increase quantity">+</button>
-            </div>
-            <p class="p-200">
-              Steppers are great for small numeric tweaks like number of seats or items.
-            </p>
-          </div>
-
-          <div class="tile ratio-100 tile-400">
-            <h3>Dismissible tag.</h3>
-            <div class="tag-400" aria-label="Active filter: Accessibility">
-              <span class="tag-400__label p-200">Accessibility</span>
-              <button type="button" class="tag-400__close" aria-label="Remove filter">×</button>
-            </div>
-            <p class="p-200">
-              Tags with remove controls let users quickly adjust active filters or interests.
-            </p>
-          </div>
-
-          <div class="tile ratio-200 tile-400">
-            <h3>Search with clear action.</h3>
-            <form class="search-400" role="search" action="#" onsubmit="return false;">
-              <input
-                type="search"
-                class="search-400__input"
-                placeholder="Search components"
-                aria-label="Search components"
-              />
-              <button type="button" class="search-400__clear" aria-label="Clear search">×</button>
-            </form>
-            <p class="p-200">
-              Adding a clear affordance speeds up repeated search iterations.
-            </p>
-          </div>
-
-          <div class="tile ratio-200 tile-400">
-            <h3>Toast notification.</h3>
-            <div class="toast-400 toast-400--visible" role="status" aria-live="polite">
-              <p class="toast-400__body p-200">Draft saved just now.</p>
-              <button type="button" class="toast-400__dismiss" aria-label="Dismiss notification">Dismiss</button>
-            </div>
-            <p class="p-200">
-              Toasts are ideal for ephemeral, non-blocking status updates.
-            </p>
-          </div>
-
-          <div class="tile ratio-100 tile-400">
-            <h3>Play / pause micro-control.</h3>
-            <button
-              type="button"
-              class="media-toggle-400"
-              aria-pressed="false"
-              aria-label="Play demo"
-            >
-              <span class="media-toggle-400__icon" aria-hidden="true">▶</span>
-              <span class="media-toggle-400__label p-200">Play demo</span>
-            </button>
-            <p class="p-200">
-              Inline media toggles give quick control without exposing full player chrome.
-            </p>
-          </div>
-
-          <div class="tile ratio-200 tile-400">
-            <h3>Inline validation message.</h3>
-            <label class="field-400">
-              <span class="field-400__label p-200">Email address</span>
-              <input
-                type="email"
-                class="field-400__input"
-                placeholder="name@example.com"
-                required
-              />
-              <span class="field-400__message p-200" aria-live="polite"></span>
-            </label>
-            <p class="p-200">
-              Inline validation reduces friction by catching small mistakes early.
-            </p>
-          </div>
-
-          <div class="tile ratio-100 tile-400">
-            <h3>Loading button.</h3>
-            <button
-              type="button"
-              class="btn btn-400 loading-btn-400"
-              data-loading-text="Saving…"
-              data-label-text="Save changes"
-            >
-              <span class="loading-btn-400__spinner" aria-hidden="true"></span>
-              <span class="loading-btn-400__label">Save changes</span>
-            </button>
-            <p class="p-200">
-              Loading states on buttons reassure users that something is happening.
-            </p>
-          </div>
-
-          <div class="tile ratio-200 tile-400">
-            <h3>Range slider with value.</h3>
-            <div class="slider-400">
-              <label class="p-200" for="intensity-range">Shadow intensity</label>
-              <input
-                id="intensity-range"
-                type="range"
-                class="slider-400__input"
-                min="0"
-                max="100"
-                value="40"
-              />
-              <span class="slider-400__value p-200" aria-live="polite">40%</span>
-            </div>
-            <p class="p-200">
-              Range sliders are ideal for coarse adjustments like volume or intensity.
-            </p>
-          </div>
-
-          <div class="tile ratio-200 tile-400">
-            <h3>Before/after layout comparison.</h3>
-            <div class="image-compare-400">
-              <div class="image-compare-400__viewport" style="--split: 50">
-                <img
-                  src="assets/img/architecture-21665_1920.jpeg"
-                  alt="Original layout facade"
-                />
-                <img
-                  src="assets/img/mosaic-3394375_1920.jpeg"
-                  alt="Redesigned mosaic facade"
-                  class="image-compare-400__top"
-                />
-              </div>
-              <input
-                type="range"
-                class="image-compare-400__slider"
-                min="0"
-                max="100"
-                value="50"
-                aria-label="Reveal redesigned facade"
-              />
-            </div>
-            <p class="p-200">
-              Drag to reveal subtle design changes side by side.
-            </p>
-          </div>
-
-          <div class="tile ratio-200 tile-400">
-            <h3>Hover-scrub architecture gallery.</h3>
-            <div class="hover-gallery-400">
-              <figure class="hover-gallery-400__preview">
-                <img
-                  src="assets/img/architecture-1850055_1920.jpeg"
-                  alt="Architecture preview"
-                />
-              </figure>
-              <div class="hover-gallery-400__thumbs">
-                <button
-                  type="button"
-                  class="hover-gallery-400__thumb is-active"
-                  aria-label="View bridge layout"
-                  style="background-image: url('assets/img/architecture-1850055_1920.jpeg')"
-                  data-img="assets/img/architecture-1850055_1920.jpeg"
-                ></button>
-                <button
-                  type="button"
-                  class="hover-gallery-400__thumb"
-                  aria-label="View glass atrium"
-                  style="background-image: url('assets/img/architecture-21665_1920.jpeg')"
-                  data-img="assets/img/architecture-21665_1920.jpeg"
-                ></button>
-                <button
-                  type="button"
-                  class="hover-gallery-400__thumb"
-                  aria-label="View geometric mosaic"
-                  style="background-image: url('assets/img/mosaic-3394375_1920.jpeg')"
-                  data-img="assets/img/mosaic-3394375_1920.jpeg"
-                ></button>
-              </div>
-            </div>
-            <p class="p-200">
-              Scrub across thumbnails to explore mood variations without leaving the card.
-            </p>
-          </div>
-
-          <div class="tile ratio-100 tile-400">
-            <h3>Design mood picker.</h3>
-            <div class="mood-400" role="radiogroup" aria-label="Design mood">
-              <button type="button" class="mood-400__option is-active" aria-pressed="true">
-                Calm
-              </button>
-              <button type="button" class="mood-400__option" aria-pressed="false">
-                Playful
-              </button>
-              <button type="button" class="mood-400__option" aria-pressed="false">
-                Bold
-              </button>
-            </div>
-            <p class="p-200">
-              Let people tune the vibe of a screen before they commit to a theme.
-            </p>
-          </div>
-
-          <div class="tile ratio-100 tile-400">
-            <h3>Random layout prompt.</h3>
-            <div class="inspo-400">
-              <p class="inspo-400__text p-200">Design the empty states first.</p>
-              <button type="button" class="inspo-400__shuffle btn btn-200">Shuffle idea</button>
-            </div>
-            <p class="p-200">
-              Tiny prompts keep teams inspired during production work.
-            </p>
-          </div>
-
-          <div class="tile ratio-100 tile-400">
-            <h3>Micro poll: was this helpful?</h3>
-            <div class="poll-400" aria-label="Was this helpful?">
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-100 tile-400">
+              <h3>Loading button.</h3>
               <button
                 type="button"
-                class="poll-400__button"
-                data-direction="up"
-                aria-label="Yes, this was helpful"
+                class="btn btn-400 loading-btn-400"
+                data-loading-text="Saving…"
+                data-label-text="Save changes"
               >
-                <span class="poll-400__icon" aria-hidden="true">👍</span>
-                <span class="poll-400__count" aria-hidden="true">12</span>
+                <span class="loading-btn-400__spinner" aria-hidden="true"></span>
+                <span class="loading-btn-400__label">Save changes</span>
               </button>
-              <button
-                type="button"
-                class="poll-400__button"
-                data-direction="down"
-                aria-label="No, this was not helpful"
-              >
-                <span class="poll-400__icon" aria-hidden="true">👎</span>
-                <span class="poll-400__count" aria-hidden="true">3</span>
-              </button>
+              <p class="p-200">Loading states on buttons reassure users that something is happening.</p>
             </div>
-            <p class="p-200">
-              A single-tap poll gives a quick pulse without a full survey.
-            </p>
           </div>
 
-          <div class="tile ratio-100 tile-400">
-            <h3>Seven-day streak tracker.</h3>
-            <div class="streak-400" aria-label="Design streak">
-              <button type="button" class="streak-400__day" aria-pressed="false">M</button>
-              <button type="button" class="streak-400__day" aria-pressed="false">T</button>
-              <button type="button" class="streak-400__day" aria-pressed="false">W</button>
-              <button type="button" class="streak-400__day" aria-pressed="false">T</button>
-              <button type="button" class="streak-400__day" aria-pressed="false">F</button>
-              <button type="button" class="streak-400__day" aria-pressed="false">S</button>
-              <button type="button" class="streak-400__day" aria-pressed="false">S</button>
-            </div>
-            <p class="streak-400__summary p-200">0 of 7 days checked in.</p>
-            <p class="p-200">
-              Gamified streaks nudge people to refine components a little each day.
-            </p>
-          </div>
-
-          <div class="tile ratio-200 tile-400">
-            <h3>Character-limited microcopy.</h3>
-            <div class="char-count-400">
-              <label class="p-200" for="microcopy-input">Tooltip text</label>
-              <textarea
-                id="microcopy-input"
-                class="char-count-400__input"
-                rows="3"
-                maxlength="120"
-                aria-describedby="microcopy-hint"
-              ></textarea>
-              <div class="char-count-400__meta p-200" id="microcopy-hint">
-                <span class="char-count-400__current">0</span>/<span
-                  class="char-count-400__limit"
-                  >120</span
-                >
-                characters
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-200 tile-400">
+              <h3>Range slider with value.</h3>
+              <div class="slider-400">
+                <label class="p-200" for="intensity-range">Shadow intensity</label>
+                <input id="intensity-range" type="range" class="slider-400__input" min="0" max="100" value="40" />
+                <span class="slider-400__value p-200" aria-live="polite">40%</span>
               </div>
+              <p class="p-200">Range sliders are ideal for coarse adjustments like volume or intensity.</p>
             </div>
-            <p class="p-200">
-              Live character counts make constraints explicit without feeling punitive.
-            </p>
           </div>
 
-          <div class="tile ratio-100 tile-400">
-            <h3>Cursor magnet dot.</h3>
-            <div class="magnet-400">
-              <div class="magnet-400__dot"></div>
-            </div>
-            <p class="p-200">
-              Tiny motion that follows the pointer makes dense layouts feel alive.
-            </p>
-          </div>
-
-          <div class="tile ratio-100 tile-400">
-            <h3>Confetti celebration.</h3>
-            <button type="button" class="btn btn-400 confetti-400">Celebrate handoff</button>
-            <p class="p-200">
-              A subtle burst of confetti rewards major milestones like design approvals.
-            </p>
-          </div>
-
-          <div class="tile ratio-200 tile-400">
-            <h3>Onboarding stepper.</h3>
-            <ol class="stepper-flow-400" aria-label="Onboarding steps">
-              <li class="stepper-flow-400__step is-current">
-                <button type="button" data-step-label="Welcome">1</button>
-              </li>
-              <li class="stepper-flow-400__step">
-                <button type="button" data-step-label="Connect data">2</button>
-              </li>
-              <li class="stepper-flow-400__step">
-                <button type="button" data-step-label="Invite team">3</button>
-              </li>
-            </ol>
-            <p class="stepper-flow-400__hint p-200">Step 1 of 3: Welcome</p>
-            <p class="p-200">
-              Step indicators orient users during multi-screen flows without overwhelming them.
-            </p>
-          </div>
-
-          <div class="tile ratio-100 tile-400">
-            <h3>Breathing focus indicator.</h3>
-            <div class="breathing-400" aria-hidden="true"></div>
-            <p class="p-200">
-              A gentle breathing dot can signal “focus time” without noisy alerts.
-            </p>
-          </div>
-
-          <div class="tile ratio-200 tile-400">
-            <h3>Hover to peek architecture.</h3>
-            <div class="peek-400">
-              <figure class="peek-400__image">
-                <img
-                  src="assets/img/architecture-6517841_1920.jpg"
-                  alt="Layered architecture concept"
-                />
-              </figure>
-              <div class="peek-400__overlay p-200">
-                Hover to reveal the underlying structure behind the overlay.
-              </div>
-            </div>
-            <p class="p-200">
-              Peek patterns let users preview dense visuals without navigating away.
-            </p>
-          </div>
-
-          <div class="tile ratio-100 tile-400">
-            <h3>Greyscale token palette.</h3>
-            <div class="palette-400" aria-label="Greyscale tokens">
-              <button
-                type="button"
-                class="palette-400__swatch palette-400__swatch--grey-100 is-active"
-                data-token="--color-grey-100"
-                aria-pressed="true"
-              ></button>
-              <button
-                type="button"
-                class="palette-400__swatch palette-400__swatch--grey-300"
-                data-token="--color-grey-300"
-                aria-pressed="false"
-              ></button>
-              <button
-                type="button"
-                class="palette-400__swatch palette-400__swatch--grey-500"
-                data-token="--color-grey-500"
-                aria-pressed="false"
-              ></button>
-              <button
-                type="button"
-                class="palette-400__swatch palette-400__swatch--grey-700"
-                data-token="--color-grey-700"
-                aria-pressed="false"
-              ></button>
-              <p class="palette-400__label p-200">Token: --color-grey-100</p>
-            </div>
-            <p class="p-200">
-              Token palettes help designers reason in primitives instead of hex codes.
-            </p>
-          </div>
-
-          <div class="tile ratio-100 tile-400">
-            <h3>Timeline step marker.</h3>
-            <div class="timeline-400" aria-label="Design review timeline">
-              <button
-                type="button"
-                class="timeline-400__dot is-active"
-                data-label="Draft"
-              ></button>
-              <button
-                type="button"
-                class="timeline-400__dot"
-                data-label="Review"
-              ></button>
-              <button
-                type="button"
-                class="timeline-400__dot"
-                data-label="Shipped"
-              ></button>
-            </div>
-            <p class="timeline-400__label p-200">Draft</p>
-            <p class="p-200">
-              Clicking dots previews where users are in long-running workflows.
-            </p>
-          </div>
-
-          <div class="tile ratio-100 tile-400">
-            <h3>Undo snack.</h3>
-            <div class="undo-400">
-              <button type="button" class="btn btn-200 undo-400__delete">Archive tile</button>
-              <button type="button" class="undo-400__chip p-200" hidden>
-                Archived. <span class="undo-400__link">Undo</span>
-              </button>
-            </div>
-            <p class="p-200">
-              Instant undo chips forgive accidental taps without extra dialogs.
-            </p>
-          </div>
-
-          <div class="tile ratio-100 tile-400">
-            <h3>Emoji reaction bar.</h3>
-            <div class="reactions-400" aria-label="React to this section">
-              <button type="button" class="reactions-400__btn" data-emoji="✨">
-                <span class="reactions-400__emoji">✨</span>
-                <span class="reactions-400__count">0</span>
-              </button>
-              <button type="button" class="reactions-400__btn" data-emoji="❤️">
-                <span class="reactions-400__emoji">❤️</span>
-                <span class="reactions-400__count">0</span>
-              </button>
-              <button type="button" class="reactions-400__btn" data-emoji="🤔">
-                <span class="reactions-400__emoji">🤔</span>
-                <span class="reactions-400__count">0</span>
-              </button>
-            </div>
-            <p class="p-200">
-              Emoji quick-reactions capture nuance that a simple like button misses.
-            </p>
-          </div>
-
-          <div class="tile ratio-200 tile-400">
-            <h3>Tilted cover card.</h3>
-            <div class="tilt-card-400">
-              <div class="tilt-card-400__inner">
-                <figure>
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-200 tile-400">
+              <h3>Before/after layout comparison.</h3>
+              <div class="image-compare-400">
+                <div class="image-compare-400__viewport" style="--split: 50">
+                  <img src="assets/img/architecture-21665_1920.jpeg" alt="Original layout facade" />
                   <img
                     src="assets/img/mosaic-3394375_1920.jpeg"
-                    alt="Mosaic cover"
+                    alt="Redesigned mosaic facade"
+                    class="image-compare-400__top"
                   />
-                </figure>
-                <p class="p-200">Move your cursor to feel a subtle parallax tilt.</p>
+                </div>
+                <input
+                  type="range"
+                  class="image-compare-400__slider"
+                  min="0"
+                  max="100"
+                  value="50"
+                  aria-label="Reveal redesigned facade"
+                />
               </div>
+              <p class="p-200">Drag to reveal subtle design changes side by side.</p>
             </div>
-            <p class="p-200">
-              Micro motion gives hero covers a tactile, game-like feel.
-            </p>
           </div>
 
-          <div class="tile ratio-200 tile-400">
-            <h3>Layered image stack.</h3>
-            <div class="image-stack-400">
-              <figure class="image-stack-400__item image-stack-400__item--bottom">
-                <img
-                  src="assets/img/architecture-1850055_1920.jpeg"
-                  alt="Architecture angle one"
-                />
-              </figure>
-              <figure class="image-stack-400__item image-stack-400__item--middle">
-                <img
-                  src="assets/img/architecture-21665_1920.jpeg"
-                  alt="Architecture angle two"
-                />
-              </figure>
-              <figure class="image-stack-400__item image-stack-400__item--top">
-                <img
-                  src="assets/img/architecture-6517841_1920.jpg"
-                  alt="Architecture angle three"
-                />
-              </figure>
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-200 tile-400">
+              <h3>Hover-scrub architecture gallery.</h3>
+              <div class="hover-gallery-400">
+                <figure class="hover-gallery-400__preview">
+                  <img src="assets/img/architecture-1850055_1920.jpeg" alt="Architecture preview" />
+                </figure>
+                <div class="hover-gallery-400__thumbs">
+                  <button
+                    type="button"
+                    class="hover-gallery-400__thumb is-active"
+                    aria-label="View bridge layout"
+                    style="background-image: url('assets/img/architecture-1850055_1920.jpeg')"
+                    data-img="assets/img/architecture-1850055_1920.jpeg"
+                  ></button>
+                  <button
+                    type="button"
+                    class="hover-gallery-400__thumb"
+                    aria-label="View glass atrium"
+                    style="background-image: url('assets/img/architecture-21665_1920.jpeg')"
+                    data-img="assets/img/architecture-21665_1920.jpeg"
+                  ></button>
+                  <button
+                    type="button"
+                    class="hover-gallery-400__thumb"
+                    aria-label="View geometric mosaic"
+                    style="background-image: url('assets/img/mosaic-3394375_1920.jpeg')"
+                    data-img="assets/img/mosaic-3394375_1920.jpeg"
+                  ></button>
+                </div>
+              </div>
+              <p class="p-200">Scrub across thumbnails to explore mood variations without leaving the card.</p>
             </div>
-            <p class="p-200">
-              Stacked shots illustrate states or variations without overwhelming the grid.
-            </p>
           </div>
 
-          <div class="tile ratio-200 tile-400">
-            <h3>Ambient image dimmer.</h3>
-            <div class="focus-mode-400">
-              <figure class="focus-mode-400__image">
-                <img
-                  src="assets/img/architecture-21665_1920.jpeg"
-                  alt="Calm architecture backdrop"
-                />
-              </figure>
-              <button
-                type="button"
-                class="focus-mode-400__toggle btn btn-200"
-                aria-pressed="false"
-              >
-                Dim background
-              </button>
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-100 tile-400">
+              <h3>Design mood picker.</h3>
+              <div class="mood-400" role="radiogroup" aria-label="Design mood">
+                <button type="button" class="mood-400__option is-active" aria-pressed="true">Calm</button>
+                <button type="button" class="mood-400__option" aria-pressed="false">Playful</button>
+                <button type="button" class="mood-400__option" aria-pressed="false">Bold</button>
+              </div>
+              <p class="p-200">Let people tune the vibe of a screen before they commit to a theme.</p>
             </div>
-            <p class="p-200">
-              Dimming hero imagery reduces visual noise when users need to focus.
-            </p>
           </div>
 
-          <div class="tile ratio-200 tile-400">
-            <h3>Micro checklist.</h3>
-            <div class="checklist-400" aria-label="Publish checklist">
-              <button type="button" class="checklist-400__item" aria-pressed="false">
-                <span class="checklist-400__box" aria-hidden="true"></span>
-                <span class="checklist-400__label p-200">Run accessibility audit</span>
-              </button>
-              <button type="button" class="checklist-400__item" aria-pressed="false">
-                <span class="checklist-400__box" aria-hidden="true"></span>
-                <span class="checklist-400__label p-200">Sync design tokens</span>
-              </button>
-              <button type="button" class="checklist-400__item" aria-pressed="false">
-                <span class="checklist-400__box" aria-hidden="true"></span>
-                <span class="checklist-400__label p-200">Notify stakeholders</span>
-              </button>
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-100 tile-400">
+              <h3>Random layout prompt.</h3>
+              <div class="inspo-400">
+                <p class="inspo-400__text p-200">Design the empty states first.</p>
+                <button type="button" class="inspo-400__shuffle btn btn-200">Shuffle idea</button>
+              </div>
+              <p class="p-200">Tiny prompts keep teams inspired during production work.</p>
             </div>
-            <p class="checklist-400__summary p-200">0 of 3 tasks completed.</p>
-            <p class="p-200">
-              Tiny checklists nudge teams across the finish line on complex launches.
-            </p>
           </div>
 
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-100 tile-400">
+              <h3>Micro poll: was this helpful?</h3>
+              <div class="poll-400" aria-label="Was this helpful?">
+                <button type="button" class="poll-400__button" data-direction="up" aria-label="Yes, this was helpful">
+                  <span class="poll-400__icon" aria-hidden="true">👍</span>
+                  <span class="poll-400__count" aria-hidden="true">12</span>
+                </button>
+                <button
+                  type="button"
+                  class="poll-400__button"
+                  data-direction="down"
+                  aria-label="No, this was not helpful"
+                >
+                  <span class="poll-400__icon" aria-hidden="true">👎</span>
+                  <span class="poll-400__count" aria-hidden="true">3</span>
+                </button>
+              </div>
+              <p class="p-200">A single-tap poll gives a quick pulse without a full survey.</p>
+            </div>
+          </div>
+
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-100 tile-400">
+              <h3>Seven-day streak tracker.</h3>
+              <div class="streak-400" aria-label="Design streak">
+                <button type="button" class="streak-400__day" aria-pressed="false">M</button>
+                <button type="button" class="streak-400__day" aria-pressed="false">T</button>
+                <button type="button" class="streak-400__day" aria-pressed="false">W</button>
+                <button type="button" class="streak-400__day" aria-pressed="false">T</button>
+                <button type="button" class="streak-400__day" aria-pressed="false">F</button>
+                <button type="button" class="streak-400__day" aria-pressed="false">S</button>
+                <button type="button" class="streak-400__day" aria-pressed="false">S</button>
+              </div>
+              <p class="streak-400__summary p-200">0 of 7 days checked in.</p>
+              <p class="p-200">Gamified streaks nudge people to refine components a little each day.</p>
+            </div>
+          </div>
+
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-200 tile-400">
+              <h3>Character-limited microcopy.</h3>
+              <div class="char-count-400">
+                <label class="p-200" for="microcopy-input">Tooltip text</label>
+                <textarea
+                  id="microcopy-input"
+                  class="char-count-400__input"
+                  rows="3"
+                  maxlength="120"
+                  aria-describedby="microcopy-hint"
+                ></textarea>
+                <div class="char-count-400__meta p-200" id="microcopy-hint">
+                  <span class="char-count-400__current">0</span>
+                  /
+                  <span class="char-count-400__limit">120</span>
+                  characters
+                </div>
+              </div>
+              <p class="p-200">Live character counts make constraints explicit without feeling punitive.</p>
+            </div>
+          </div>
+
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-100 tile-400">
+              <h3>Cursor magnet dot.</h3>
+              <div class="magnet-400">
+                <div class="magnet-400__dot"></div>
+              </div>
+              <p class="p-200">Tiny motion that follows the pointer makes dense layouts feel alive.</p>
+            </div>
+          </div>
+
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-100 tile-400">
+              <h3>Confetti celebration.</h3>
+              <button type="button" class="btn btn-400 confetti-400">Celebrate handoff</button>
+              <p class="p-200">A subtle burst of confetti rewards major milestones like design approvals.</p>
+            </div>
+          </div>
+
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-200 tile-400">
+              <h3>Onboarding stepper.</h3>
+              <ol class="stepper-flow-400" aria-label="Onboarding steps">
+                <li class="stepper-flow-400__step is-current">
+                  <button type="button" data-step-label="Welcome">1</button>
+                </li>
+                <li class="stepper-flow-400__step">
+                  <button type="button" data-step-label="Connect data">2</button>
+                </li>
+                <li class="stepper-flow-400__step">
+                  <button type="button" data-step-label="Invite team">3</button>
+                </li>
+              </ol>
+              <p class="stepper-flow-400__hint p-200">Step 1 of 3: Welcome</p>
+              <p class="p-200">Step indicators orient users during multi-screen flows without overwhelming them.</p>
+            </div>
+          </div>
+
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-100 tile-400">
+              <h3>Breathing focus indicator.</h3>
+              <div class="breathing-400" aria-hidden="true"></div>
+              <p class="p-200">A gentle breathing dot can signal "focus time" without noisy alerts.</p>
+            </div>
+          </div>
+
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-200 tile-400">
+              <h3>Hover to peek architecture.</h3>
+              <div class="peek-400">
+                <figure class="peek-400__image">
+                  <img src="assets/img/architecture-6517841_1920.jpg" alt="Layered architecture concept" />
+                </figure>
+                <div class="peek-400__overlay p-200">Hover to reveal the underlying structure behind the overlay.</div>
+              </div>
+              <p class="p-200">Peek patterns let users preview dense visuals without navigating away.</p>
+            </div>
+          </div>
+
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-100 tile-400">
+              <h3>Greyscale token palette.</h3>
+              <div class="palette-400" aria-label="Greyscale tokens">
+                <button
+                  type="button"
+                  class="palette-400__swatch palette-400__swatch--grey-100 is-active"
+                  data-token="--color-grey-100"
+                  aria-pressed="true"
+                ></button>
+                <button
+                  type="button"
+                  class="palette-400__swatch palette-400__swatch--grey-300"
+                  data-token="--color-grey-300"
+                  aria-pressed="false"
+                ></button>
+                <button
+                  type="button"
+                  class="palette-400__swatch palette-400__swatch--grey-500"
+                  data-token="--color-grey-500"
+                  aria-pressed="false"
+                ></button>
+                <button
+                  type="button"
+                  class="palette-400__swatch palette-400__swatch--grey-700"
+                  data-token="--color-grey-700"
+                  aria-pressed="false"
+                ></button>
+                <p class="palette-400__label p-200">Token: --color-grey-100</p>
+              </div>
+              <p class="p-200">Token palettes help designers reason in primitives instead of hex codes.</p>
+            </div>
+          </div>
+
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-100 tile-400">
+              <h3>Timeline step marker.</h3>
+              <div class="timeline-400" aria-label="Design review timeline">
+                <button type="button" class="timeline-400__dot is-active" data-label="Draft"></button>
+                <button type="button" class="timeline-400__dot" data-label="Review"></button>
+                <button type="button" class="timeline-400__dot" data-label="Shipped"></button>
+              </div>
+              <p class="timeline-400__label p-200">Draft</p>
+              <p class="p-200">Clicking dots previews where users are in long-running workflows.</p>
+            </div>
+          </div>
+
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-100 tile-400">
+              <h3>Undo snack.</h3>
+              <div class="undo-400">
+                <button type="button" class="btn btn-200 undo-400__delete">Archive tile</button>
+                <button type="button" class="undo-400__chip p-200" hidden>
+                  Archived.
+                  <span class="undo-400__link">Undo</span>
+                </button>
+              </div>
+              <p class="p-200">Instant undo chips forgive accidental taps without extra dialogs.</p>
+            </div>
+          </div>
+
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-100 tile-400">
+              <h3>Emoji reaction bar.</h3>
+              <div class="reactions-400" aria-label="React to this section">
+                <button type="button" class="reactions-400__btn" data-emoji="✨">
+                  <span class="reactions-400__emoji">✨</span>
+                  <span class="reactions-400__count">0</span>
+                </button>
+                <button type="button" class="reactions-400__btn" data-emoji="❤️">
+                  <span class="reactions-400__emoji">❤️</span>
+                  <span class="reactions-400__count">0</span>
+                </button>
+                <button type="button" class="reactions-400__btn" data-emoji="🤔">
+                  <span class="reactions-400__emoji">🤔</span>
+                  <span class="reactions-400__count">0</span>
+                </button>
+              </div>
+              <p class="p-200">Emoji quick-reactions capture nuance that a simple like button misses.</p>
+            </div>
+          </div>
+
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-200 tile-400">
+              <h3>Tilted cover card.</h3>
+              <div class="tilt-card-400">
+                <div class="tilt-card-400__inner">
+                  <figure>
+                    <img src="assets/img/mosaic-3394375_1920.jpeg" alt="Mosaic cover" />
+                  </figure>
+                  <p class="p-200">Move your cursor to feel a subtle parallax tilt.</p>
+                </div>
+              </div>
+              <p class="p-200">Micro motion gives hero covers a tactile, game-like feel.</p>
+            </div>
+          </div>
+
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-200 tile-400">
+              <h3>Layered image stack.</h3>
+              <div class="image-stack-400">
+                <figure class="image-stack-400__item image-stack-400__item--bottom">
+                  <img src="assets/img/architecture-1850055_1920.jpeg" alt="Architecture angle one" />
+                </figure>
+                <figure class="image-stack-400__item image-stack-400__item--middle">
+                  <img src="assets/img/architecture-21665_1920.jpeg" alt="Architecture angle two" />
+                </figure>
+                <figure class="image-stack-400__item image-stack-400__item--top">
+                  <img src="assets/img/architecture-6517841_1920.jpg" alt="Architecture angle three" />
+                </figure>
+              </div>
+              <p class="p-200">Stacked shots illustrate states or variations without overwhelming the grid.</p>
+            </div>
+          </div>
+
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-200 tile-400">
+              <h3>Ambient image dimmer.</h3>
+              <div class="focus-mode-400">
+                <figure class="focus-mode-400__image">
+                  <img src="assets/img/architecture-21665_1920.jpeg" alt="Calm architecture backdrop" />
+                </figure>
+                <button type="button" class="focus-mode-400__toggle btn btn-200" aria-pressed="false">
+                  Dim background
+                </button>
+              </div>
+              <p class="p-200">Dimming hero imagery reduces visual noise when users need to focus.</p>
+            </div>
+          </div>
+
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-200 tile-400">
+              <h3>Micro checklist.</h3>
+              <div class="checklist-400" aria-label="Publish checklist">
+                <button type="button" class="checklist-400__item" aria-pressed="false">
+                  <span class="checklist-400__box" aria-hidden="true"></span>
+                  <span class="checklist-400__label p-200">Run accessibility audit</span>
+                </button>
+                <button type="button" class="checklist-400__item" aria-pressed="false">
+                  <span class="checklist-400__box" aria-hidden="true"></span>
+                  <span class="checklist-400__label p-200">Sync design tokens</span>
+                </button>
+                <button type="button" class="checklist-400__item" aria-pressed="false">
+                  <span class="checklist-400__box" aria-hidden="true"></span>
+                  <span class="checklist-400__label p-200">Notify stakeholders</span>
+                </button>
+              </div>
+              <p class="checklist-400__summary p-200">0 of 3 tasks completed.</p>
+              <p class="p-200">Tiny checklists nudge teams across the finish line on complex launches.</p>
+            </div>
+          </div>
         </div>
       </section>
     </main>

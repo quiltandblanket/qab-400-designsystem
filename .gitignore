@@ -42,3 +42,6 @@ yarn-error.log*
 sandbox.html
 container-query-notes.md
 _dump/
+
+# Internal planning documents
+ROADMAP.md
