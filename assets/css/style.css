@@ -41,6 +41,10 @@ button {
   color: inherit;
 }
 
+nav ul {
+  list-style: none;
+}
+
 /*--------------
 LAYOUT
 --------------*/
@@ -84,6 +88,10 @@ p {
   width: min(100%, 76rem);
   margin-inline: auto;
   padding: 1rem 0.5rem;
+}
+
+.main-header {
+  min-height: 15vh;
 }
 
 main {
@@ -160,8 +168,27 @@ Grids
   grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
 }
 
+
+
 /*--------------
-COLORS
+NAVIGATION
+--------------*/
+
+.main-nav {
+border-bottom: 1px solid var(--color-grey-200);
+width: 100%;
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+
+.nav-bar {
+  display: flex;
+  gap: var(--layout-space-400);
+}
+
+/*--------------
+COLOR
 --------------*/
 
 /**-----
@@ -170,6 +197,7 @@ Color Vars
 
 :root {
   --color-hue-base-400: 199;
+  --color-hue-base-500: 34;
 
   /*Grey Scale*/
   --color-grey-100: hsl(var(--color-hue-base-400), 5%, 97%);
@@ -181,6 +209,9 @@ Color Vars
   --color-grey-500: hsl(var(--color-hue-base-400), 34%, 34%);
   --color-grey-600: hsl(var(--color-hue-base-400), 42%, 21%);
   --color-grey-700: hsl(var(--color-hue-base-400), 55%, 8%);
+
+  /*Accents*/
+  --color-accent-400: hsl(var(--color-hue-base-500), 97%, 55%);
 }
 
 /**-----
@@ -190,6 +221,12 @@ Base Colors
 body {
   color: var(--color-grey-500);
 }
+
+.main-nav,
+.header-400 {
+  background: var(--color-grey-100);
+  color: var(--color-grey-600);
+} 
 
 .footer-400 {
   background: var(--color-grey-600);
@@ -217,6 +254,10 @@ body {
   background: var(--color-grey-100);
   border: 1px solid var(--color-grey-360);
   color: var(--color-grey-700);
+}
+
+a:hover, a:active, .current-page {
+  color: var(--color-accent-400);
 }
 
 /**-----
@@ -260,6 +301,15 @@ footer,
 h3,
 .p-600 {
   font-size: 1.25rem;
+}
+
+
+/**-----
+Font Weights
+------**/
+
+.nav-bar > li a {
+  font-weight: 600;
 }
 
 /*--------------

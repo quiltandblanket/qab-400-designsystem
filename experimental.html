@@ -1,316 +1,353 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Experimental Interactive Elements - QAB 400</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-  <main>
-    <section>
-      <header class="container section-header w34">
-        <h2>Experimental Interactive Elements</h2>
-        <p>A collection of 20 highly interactive UI components exploring advanced user interactions, animations, and engagement patterns within the QAB 400 Design System.</p>
-      </header>
-
-      <div class="container grid grid-200">
-        
-        <!-- 1. Color Picker -->
-        <div class="wrapper tile-wrapper">
-          <div class="tile ratio-400 tile-400">
-            <h3>Color Picker</h3>
-            <div class="color-picker-exp">
-              <input type="color" class="color-picker-exp__input" value="#3498db">
-              <div class="color-picker-exp__preview"></div>
-              <input type="text" class="color-picker-exp__hex" value="#3498db" readonly>
-            </div>
-            <p class="p-200">Select and preview colors with live hex display</p>
-          </div>
-        </div>
-
-        <!-- 2. Drag and Drop Reorder -->
-        <div class="wrapper tile-wrapper">
-          <div class="tile ratio-400 tile-400">
-            <h3>Drag & Reorder</h3>
-            <ul class="drag-list-exp">
-              <li class="drag-list-exp__item" draggable="true">Item 1</li>
-              <li class="drag-list-exp__item" draggable="true">Item 2</li>
-              <li class="drag-list-exp__item" draggable="true">Item 3</li>
-              <li class="drag-list-exp__item" draggable="true">Item 4</li>
-            </ul>
-            <p class="p-200">Drag items to reorder the list</p>
-          </div>
-        </div>
-
-        <!-- 3. Canvas Drawing -->
-        <div class="wrapper tile-wrapper">
-          <div class="tile ratio-400 tile-400">
-            <h3>Drawing Canvas</h3>
-            <div class="canvas-exp">
-              <canvas class="canvas-exp__canvas" width="280" height="180"></canvas>
-              <button class="canvas-exp__clear btn btn-200">Clear</button>
-            </div>
-            <p class="p-200">Draw freely on the canvas</p>
-          </div>
-        </div>
-
-        <!-- 4. Live Code Editor -->
-        <div class="wrapper tile-wrapper">
-          <div class="tile ratio-400 tile-400">
-            <h3>Code Editor</h3>
-            <div class="code-editor-exp">
-              <textarea class="code-editor-exp__input" spellcheck="false">function hello() {
-  return "world";
-}</textarea>
-              <div class="code-editor-exp__lines">1<br>2<br>3</div>
-            </div>
-            <p class="p-200">Syntax-highlighted code with line numbers</p>
-          </div>
-        </div>
-
-        <!-- 5. Audio Visualizer -->
-        <div class="wrapper tile-wrapper">
-          <div class="tile ratio-400 tile-400">
-            <h3>Audio Visualizer</h3>
-            <div class="audio-viz-exp">
-              <div class="audio-viz-exp__bars">
-                <span class="audio-viz-exp__bar"></span>
-                <span class="audio-viz-exp__bar"></span>
-                <span class="audio-viz-exp__bar"></span>
-                <span class="audio-viz-exp__bar"></span>
-                <span class="audio-viz-exp__bar"></span>
-                <span class="audio-viz-exp__bar"></span>
-                <span class="audio-viz-exp__bar"></span>
-                <span class="audio-viz-exp__bar"></span>
-              </div>
-              <button class="audio-viz-exp__toggle btn btn-200">Play</button>
-            </div>
-            <p class="p-200">Animated audio visualization bars</p>
-          </div>
-        </div>
-
-        <!-- 6. Swipe Cards -->
-        <div class="wrapper tile-wrapper">
-          <div class="tile ratio-400 tile-400">
-            <h3>Swipe Cards</h3>
-            <div class="swipe-cards-exp">
-              <div class="swipe-cards-exp__card">Card 1</div>
-              <div class="swipe-cards-exp__actions">
-                <button class="swipe-cards-exp__btn swipe-cards-exp__btn--left">←</button>
-                <button class="swipe-cards-exp__btn swipe-cards-exp__btn--right">→</button>
-              </div>
-            </div>
-            <p class="p-200">Swipe left or right to dismiss cards</p>
-          </div>
-        </div>
-
-        <!-- 7. Password Strength Meter -->
-        <div class="wrapper tile-wrapper">
-          <div class="tile ratio-400 tile-400">
-            <h3>Password Strength</h3>
-            <div class="password-strength-exp">
-              <input type="password" class="password-strength-exp__input" placeholder="Enter password">
-              <div class="password-strength-exp__meter">
-                <div class="password-strength-exp__bar"></div>
-              </div>
-              <span class="password-strength-exp__label">Weak</span>
-            </div>
-            <p class="p-200">Real-time password strength indicator</p>
-          </div>
-        </div>
-
-        <!-- 8. Emoji Picker -->
-        <div class="wrapper tile-wrapper">
-          <div class="tile ratio-400 tile-400">
-            <h3>Emoji Picker</h3>
-            <div class="emoji-picker-exp">
-              <button class="emoji-picker-exp__trigger btn btn-200">Add Emoji 😊</button>
-              <div class="emoji-picker-exp__panel">
-                <button class="emoji-picker-exp__emoji">😊</button>
-                <button class="emoji-picker-exp__emoji">🎉</button>
-                <button class="emoji-picker-exp__emoji">❤️</button>
-                <button class="emoji-picker-exp__emoji">👍</button>
-                <button class="emoji-picker-exp__emoji">🔥</button>
-                <button class="emoji-picker-exp__emoji">✨</button>
-              </div>
-              <div class="emoji-picker-exp__selected"></div>
-            </div>
-            <p class="p-200">Pick emojis from a popup panel</p>
-          </div>
-        </div>
-
-        <!-- 9. Particle System -->
-        <div class="wrapper tile-wrapper">
-          <div class="tile ratio-400 tile-400">
-            <h3>Particle Effect</h3>
-            <div class="particles-exp">
-              <div class="particles-exp__container"></div>
-              <button class="particles-exp__trigger btn btn-200">Burst</button>
-            </div>
-            <p class="p-200">Animated particle burst effect</p>
-          </div>
-        </div>
-
-        <!-- 10. 3D Flip Card -->
-        <div class="wrapper tile-wrapper">
-          <div class="tile ratio-400 tile-400">
-            <h3>3D Flip Card</h3>
-            <div class="flip-card-exp">
-              <div class="flip-card-exp__inner">
-                <div class="flip-card-exp__front">Front Side</div>
-                <div class="flip-card-exp__back">Back Side</div>
-              </div>
-            </div>
-            <p class="p-200">Click to flip the card in 3D</p>
-          </div>
-        </div>
-
-        <!-- 11. Parallax Scroll -->
-        <div class="wrapper tile-wrapper">
-          <div class="tile ratio-400 tile-400">
-            <h3>Parallax Effect</h3>
-            <div class="parallax-exp">
-              <div class="parallax-exp__layer parallax-exp__layer--back"></div>
-              <div class="parallax-exp__layer parallax-exp__layer--mid"></div>
-              <div class="parallax-exp__layer parallax-exp__layer--front"></div>
-              <div class="parallax-exp__content">Scroll inside</div>
-            </div>
-            <p class="p-200">Layered parallax scrolling effect</p>
-          </div>
-        </div>
-
-        <!-- 12. Morphing Button -->
-        <div class="wrapper tile-wrapper">
-          <div class="tile ratio-400 tile-400">
-            <h3>Morphing Button</h3>
-            <div class="morph-btn-exp">
-              <button class="morph-btn-exp__btn">
-                <span class="morph-btn-exp__text">Click Me</span>
-                <span class="morph-btn-exp__icon">✓</span>
-              </button>
-            </div>
-            <p class="p-200">Button morphs into success state</p>
-          </div>
-        </div>
-
-        <!-- 13. Animated Counter -->
-        <div class="wrapper tile-wrapper">
-          <div class="tile ratio-400 tile-400">
-            <h3>Animated Counter</h3>
-            <div class="counter-exp">
-              <div class="counter-exp__value">0</div>
-              <div class="counter-exp__controls">
-                <button class="counter-exp__btn counter-exp__btn--minus">−</button>
-                <button class="counter-exp__btn counter-exp__btn--plus">+</button>
-              </div>
-            </div>
-            <p class="p-200">Smoothly animated number transitions</p>
-          </div>
-        </div>
-
-        <!-- 14. Multi-Range Slider -->
-        <div class="wrapper tile-wrapper">
-          <div class="tile ratio-400 tile-400">
-            <h3>Dual Range Slider</h3>
-            <div class="dual-range-exp">
-              <div class="dual-range-exp__track">
-                <div class="dual-range-exp__range"></div>
-              </div>
-              <input type="range" class="dual-range-exp__input dual-range-exp__input--min" min="0" max="100" value="25">
-              <input type="range" class="dual-range-exp__input dual-range-exp__input--max" min="0" max="100" value="75">
-              <div class="dual-range-exp__values">
-                <span class="dual-range-exp__min">25</span> - <span class="dual-range-exp__max">75</span>
-              </div>
-            </div>
-            <p class="p-200">Select a range with two handles</p>
-          </div>
-        </div>
-
-        <!-- 15. Ripple Effect -->
-        <div class="wrapper tile-wrapper">
-          <div class="tile ratio-400 tile-400">
-            <h3>Ripple Button</h3>
-            <div class="ripple-exp">
-              <button class="ripple-exp__btn">Click Anywhere</button>
-            </div>
-            <p class="p-200">Material design ripple effect</p>
-          </div>
-        </div>
-
-        <!-- 16. Skeleton Loader -->
-        <div class="wrapper tile-wrapper">
-          <div class="tile ratio-400 tile-400">
-            <h3>Skeleton Loader</h3>
-            <div class="skeleton-exp">
-              <div class="skeleton-exp__line skeleton-exp__line--title"></div>
-              <div class="skeleton-exp__line skeleton-exp__line--text"></div>
-              <div class="skeleton-exp__line skeleton-exp__line--text"></div>
-              <button class="skeleton-exp__toggle btn btn-200">Toggle Load</button>
-            </div>
-            <p class="p-200">Animated loading placeholder</p>
-          </div>
-        </div>
-
-        <!-- 17. Color Gradient Builder -->
-        <div class="wrapper tile-wrapper">
-          <div class="tile ratio-400 tile-400">
-            <h3>Gradient Builder</h3>
-            <div class="gradient-exp">
-              <div class="gradient-exp__preview"></div>
-              <div class="gradient-exp__controls">
-                <input type="color" class="gradient-exp__color" value="#3498db">
-                <input type="color" class="gradient-exp__color" value="#e74c3c">
-              </div>
-            </div>
-            <p class="p-200">Create custom color gradients</p>
-          </div>
-        </div>
-
-        <!-- 18. Notification Stack -->
-        <div class="wrapper tile-wrapper">
-          <div class="tile ratio-400 tile-400">
-            <h3>Notification Stack</h3>
-            <div class="notif-stack-exp">
-              <div class="notif-stack-exp__container"></div>
-              <button class="notif-stack-exp__trigger btn btn-200">Add Notification</button>
-            </div>
-            <p class="p-200">Stacked notification system</p>
-          </div>
-        </div>
-
-        <!-- 19. Typewriter Effect -->
-        <div class="wrapper tile-wrapper">
-          <div class="tile ratio-400 tile-400">
-            <h3>Typewriter</h3>
-            <div class="typewriter-exp">
-              <div class="typewriter-exp__text"></div>
-              <button class="typewriter-exp__start btn btn-200">Start Typing</button>
-            </div>
-            <p class="p-200">Animated typewriter text effect</p>
-          </div>
-        </div>
-
-        <!-- 20. Infinite Scroll -->
-        <div class="wrapper tile-wrapper">
-          <div class="tile ratio-400 tile-400">
-            <h3>Infinite Scroll</h3>
-            <div class="infinite-scroll-exp">
-              <div class="infinite-scroll-exp__list">
-                <div class="infinite-scroll-exp__item">Item 1</div>
-                <div class="infinite-scroll-exp__item">Item 2</div>
-                <div class="infinite-scroll-exp__item">Item 3</div>
-              </div>
-              <div class="infinite-scroll-exp__loader">Loading...</div>
-            </div>
-            <p class="p-200">Auto-load content on scroll</p>
-          </div>
-        </div>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QAB 400 Designsystem</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+  </head>
+  <body>
+    <header class="main-header header-400">
+      <div class="container w34">
+        <h1>QAB 400 Design System</h1>
+        <p>A minimal design system with an important role: to serve as a base for the QAB ecosystem of UI design.</p>
       </div>
-    </section>
-  </main>
+    </header>
+    <nav class="main-nav">
+      <ul class="container nav-bar">
+        <li><a href="index.html">Home</a></li>
+        <li class="current-page"><a href="experimental.html">Experimental</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section>
+        <header class="container section-header w34">
+          <h2>Experimental Interactive Elements</h2>
+          <p>
+            A collection of 20 highly interactive UI components exploring advanced user interactions, animations, and
+            engagement patterns within the QAB 400 Design System.
+          </p>
+        </header>
 
-  <script src="assets/js/experimental.js"></script>
-</body>
+        <div class="container grid grid-200">
+          <!-- 1. Color Picker -->
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-400 tile-400">
+              <h3>Color Picker</h3>
+              <div class="color-picker-exp">
+                <input type="color" class="color-picker-exp__input" value="#3498db" />
+                <div class="color-picker-exp__preview"></div>
+                <input type="text" class="color-picker-exp__hex" value="#3498db" readonly />
+              </div>
+              <p class="p-200">Select and preview colors with live hex display</p>
+            </div>
+          </div>
+
+          <!-- 2. Drag and Drop Reorder -->
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-400 tile-400">
+              <h3>Drag & Reorder</h3>
+              <ul class="drag-list-exp">
+                <li class="drag-list-exp__item" draggable="true">Item 1</li>
+                <li class="drag-list-exp__item" draggable="true">Item 2</li>
+                <li class="drag-list-exp__item" draggable="true">Item 3</li>
+                <li class="drag-list-exp__item" draggable="true">Item 4</li>
+              </ul>
+              <p class="p-200">Drag items to reorder the list</p>
+            </div>
+          </div>
+
+          <!-- 3. Canvas Drawing -->
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-400 tile-400">
+              <h3>Drawing Canvas</h3>
+              <div class="canvas-exp">
+                <canvas class="canvas-exp__canvas" width="280" height="180"></canvas>
+                <button class="canvas-exp__clear btn btn-200">Clear</button>
+              </div>
+              <p class="p-200">Draw freely on the canvas</p>
+            </div>
+          </div>
+
+          <!-- 4. Live Code Editor -->
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-400 tile-400">
+              <h3>Code Editor</h3>
+              <div class="code-editor-exp">
+                <textarea class="code-editor-exp__input" spellcheck="false">
+function hello() {
+  return "world";
+}</textarea
+                >
+                <div class="code-editor-exp__lines">
+                  1
+                  <br />
+                  2
+                  <br />
+                  3
+                </div>
+              </div>
+              <p class="p-200">Syntax-highlighted code with line numbers</p>
+            </div>
+          </div>
+
+          <!-- 5. Audio Visualizer -->
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-400 tile-400">
+              <h3>Audio Visualizer</h3>
+              <div class="audio-viz-exp">
+                <div class="audio-viz-exp__bars">
+                  <span class="audio-viz-exp__bar"></span>
+                  <span class="audio-viz-exp__bar"></span>
+                  <span class="audio-viz-exp__bar"></span>
+                  <span class="audio-viz-exp__bar"></span>
+                  <span class="audio-viz-exp__bar"></span>
+                  <span class="audio-viz-exp__bar"></span>
+                  <span class="audio-viz-exp__bar"></span>
+                  <span class="audio-viz-exp__bar"></span>
+                </div>
+                <button class="audio-viz-exp__toggle btn btn-200">Play</button>
+              </div>
+              <p class="p-200">Animated audio visualization bars</p>
+            </div>
+          </div>
+
+          <!-- 6. Swipe Cards -->
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-400 tile-400">
+              <h3>Swipe Cards</h3>
+              <div class="swipe-cards-exp">
+                <div class="swipe-cards-exp__card">Card 1</div>
+                <div class="swipe-cards-exp__actions">
+                  <button class="swipe-cards-exp__btn swipe-cards-exp__btn--left">←</button>
+                  <button class="swipe-cards-exp__btn swipe-cards-exp__btn--right">→</button>
+                </div>
+              </div>
+              <p class="p-200">Swipe left or right to dismiss cards</p>
+            </div>
+          </div>
+
+          <!-- 7. Password Strength Meter -->
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-400 tile-400">
+              <h3>Password Strength</h3>
+              <div class="password-strength-exp">
+                <input type="password" class="password-strength-exp__input" placeholder="Enter password" />
+                <div class="password-strength-exp__meter">
+                  <div class="password-strength-exp__bar"></div>
+                </div>
+                <span class="password-strength-exp__label">Weak</span>
+              </div>
+              <p class="p-200">Real-time password strength indicator</p>
+            </div>
+          </div>
+
+          <!-- 8. Emoji Picker -->
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-400 tile-400">
+              <h3>Emoji Picker</h3>
+              <div class="emoji-picker-exp">
+                <button class="emoji-picker-exp__trigger btn btn-200">Add Emoji 😊</button>
+                <div class="emoji-picker-exp__panel">
+                  <button class="emoji-picker-exp__emoji">😊</button>
+                  <button class="emoji-picker-exp__emoji">🎉</button>
+                  <button class="emoji-picker-exp__emoji">❤️</button>
+                  <button class="emoji-picker-exp__emoji">👍</button>
+                  <button class="emoji-picker-exp__emoji">🔥</button>
+                  <button class="emoji-picker-exp__emoji">✨</button>
+                </div>
+                <div class="emoji-picker-exp__selected"></div>
+              </div>
+              <p class="p-200">Pick emojis from a popup panel</p>
+            </div>
+          </div>
+
+          <!-- 9. Particle System -->
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-400 tile-400">
+              <h3>Particle Effect</h3>
+              <div class="particles-exp">
+                <div class="particles-exp__container"></div>
+                <button class="particles-exp__trigger btn btn-200">Burst</button>
+              </div>
+              <p class="p-200">Animated particle burst effect</p>
+            </div>
+          </div>
+
+          <!-- 10. 3D Flip Card -->
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-400 tile-400">
+              <h3>3D Flip Card</h3>
+              <div class="flip-card-exp">
+                <div class="flip-card-exp__inner">
+                  <div class="flip-card-exp__front">Front Side</div>
+                  <div class="flip-card-exp__back">Back Side</div>
+                </div>
+              </div>
+              <p class="p-200">Click to flip the card in 3D</p>
+            </div>
+          </div>
+
+          <!-- 11. Parallax Scroll -->
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-400 tile-400">
+              <h3>Parallax Effect</h3>
+              <div class="parallax-exp">
+                <div class="parallax-exp__layer parallax-exp__layer--back"></div>
+                <div class="parallax-exp__layer parallax-exp__layer--mid"></div>
+                <div class="parallax-exp__layer parallax-exp__layer--front"></div>
+                <div class="parallax-exp__content">Scroll inside</div>
+              </div>
+              <p class="p-200">Layered parallax scrolling effect</p>
+            </div>
+          </div>
+
+          <!-- 12. Morphing Button -->
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-400 tile-400">
+              <h3>Morphing Button</h3>
+              <div class="morph-btn-exp">
+                <button class="morph-btn-exp__btn">
+                  <span class="morph-btn-exp__text">Click Me</span>
+                  <span class="morph-btn-exp__icon">✓</span>
+                </button>
+              </div>
+              <p class="p-200">Button morphs into success state</p>
+            </div>
+          </div>
+
+          <!-- 13. Animated Counter -->
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-400 tile-400">
+              <h3>Animated Counter</h3>
+              <div class="counter-exp">
+                <div class="counter-exp__value">0</div>
+                <div class="counter-exp__controls">
+                  <button class="counter-exp__btn counter-exp__btn--minus">−</button>
+                  <button class="counter-exp__btn counter-exp__btn--plus">+</button>
+                </div>
+              </div>
+              <p class="p-200">Smoothly animated number transitions</p>
+            </div>
+          </div>
+
+          <!-- 14. Multi-Range Slider -->
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-400 tile-400">
+              <h3>Dual Range Slider</h3>
+              <div class="dual-range-exp">
+                <div class="dual-range-exp__track">
+                  <div class="dual-range-exp__range"></div>
+                </div>
+                <input
+                  type="range"
+                  class="dual-range-exp__input dual-range-exp__input--min"
+                  min="0"
+                  max="100"
+                  value="25"
+                />
+                <input
+                  type="range"
+                  class="dual-range-exp__input dual-range-exp__input--max"
+                  min="0"
+                  max="100"
+                  value="75"
+                />
+                <div class="dual-range-exp__values">
+                  <span class="dual-range-exp__min">25</span>
+                  -
+                  <span class="dual-range-exp__max">75</span>
+                </div>
+              </div>
+              <p class="p-200">Select a range with two handles</p>
+            </div>
+          </div>
+
+          <!-- 15. Ripple Effect -->
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-400 tile-400">
+              <h3>Ripple Button</h3>
+              <div class="ripple-exp">
+                <button class="ripple-exp__btn">Click Anywhere</button>
+              </div>
+              <p class="p-200">Material design ripple effect</p>
+            </div>
+          </div>
+
+          <!-- 16. Skeleton Loader -->
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-400 tile-400">
+              <h3>Skeleton Loader</h3>
+              <div class="skeleton-exp">
+                <div class="skeleton-exp__line skeleton-exp__line--title"></div>
+                <div class="skeleton-exp__line skeleton-exp__line--text"></div>
+                <div class="skeleton-exp__line skeleton-exp__line--text"></div>
+                <button class="skeleton-exp__toggle btn btn-200">Toggle Load</button>
+              </div>
+              <p class="p-200">Animated loading placeholder</p>
+            </div>
+          </div>
+
+          <!-- 17. Color Gradient Builder -->
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-400 tile-400">
+              <h3>Gradient Builder</h3>
+              <div class="gradient-exp">
+                <div class="gradient-exp__preview"></div>
+                <div class="gradient-exp__controls">
+                  <input type="color" class="gradient-exp__color" value="#3498db" />
+                  <input type="color" class="gradient-exp__color" value="#e74c3c" />
+                </div>
+              </div>
+              <p class="p-200">Create custom color gradients</p>
+            </div>
+          </div>
+
+          <!-- 18. Notification Stack -->
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-400 tile-400">
+              <h3>Notification Stack</h3>
+              <div class="notif-stack-exp">
+                <div class="notif-stack-exp__container"></div>
+                <button class="notif-stack-exp__trigger btn btn-200">Add Notification</button>
+              </div>
+              <p class="p-200">Stacked notification system</p>
+            </div>
+          </div>
+
+          <!-- 19. Typewriter Effect -->
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-400 tile-400">
+              <h3>Typewriter</h3>
+              <div class="typewriter-exp">
+                <div class="typewriter-exp__text"></div>
+                <button class="typewriter-exp__start btn btn-200">Start Typing</button>
+              </div>
+              <p class="p-200">Animated typewriter text effect</p>
+            </div>
+          </div>
+
+          <!-- 20. Infinite Scroll -->
+          <div class="wrapper tile-wrapper">
+            <div class="tile ratio-400 tile-400">
+              <h3>Infinite Scroll</h3>
+              <div class="infinite-scroll-exp">
+                <div class="infinite-scroll-exp__list">
+                  <div class="infinite-scroll-exp__item">Item 1</div>
+                  <div class="infinite-scroll-exp__item">Item 2</div>
+                  <div class="infinite-scroll-exp__item">Item 3</div>
+                </div>
+                <div class="infinite-scroll-exp__loader">Loading...</div>
+              </div>
+              <p class="p-200">Auto-load content on scroll</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="assets/js/experimental.js"></script>
+  </body>
 </html>
