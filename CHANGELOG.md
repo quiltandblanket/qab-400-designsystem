@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## v0.0.4 - 2025-12-02
+
+### Changed
+- Refactored stylesheets: Split `assets/css/style.css` into three files.
+  - `style.css` now contains only base styles (reset, layout, color, typography).
+  - Moved all component styles to `assets/css/components.css`.
+  - Moved all experimental/interactive styles to `assets/css/experimental.css`.
+- Updated `index.html` and `experimental.html` to link all three CSS files.
+
 ## v0.0.3 - 2025-12-01
 
 ### Added

@@ -1,0 +1,772 @@
+/* Extracted from style.css lines 1524+ */
+/*---------------------
+Experimental Interactive Components
+---------------------*/
+
+/* 1. Color Picker */
+.color-picker-exp {
+  display: grid;
+  gap: var(--layout-space-300);
+}
+
+.color-picker-exp__input {
+  width: 100%;
+  height: 3rem;
+  border: 1px solid var(--color-grey-300);
+  border-radius: var(--layout-radius-400);
+  cursor: pointer;
+}
+
+.color-picker-exp__preview {
+  height: 2rem;
+  border-radius: var(--layout-radius-400);
+  border: 1px solid var(--color-grey-300);
+  background: #3498db;
+}
+
+.color-picker-exp__hex {
+  padding: 0.42rem 0.76rem;
+  border-radius: var(--layout-radius-400);
+  border: 1px solid var(--color-grey-300);
+  text-align: center;
+  font-family: monospace;
+  background: var(--color-grey-100);
+}
+
+/* 2. Drag and Drop Reorder */
+.drag-list-exp {
+  list-style: none;
+  display: grid;
+  gap: var(--layout-space-200);
+}
+
+.drag-list-exp__item {
+  padding: 0.55rem 0.76rem;
+  border-radius: var(--layout-radius-400);
+  border: 1px solid var(--color-grey-300);
+  background: #fff;
+  cursor: move;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.drag-list-exp__item:hover {
+  transform: translateX(0.2rem);
+  box-shadow: 0 2px 8px hsla(var(--color-hue-base-400), 13%, 68%, 0.3);
+}
+
+.drag-list-exp__item.dragging {
+  opacity: 0.5;
+  transform: scale(1.05);
+}
+
+/* 3. Canvas Drawing */
+.canvas-exp {
+  display: grid;
+  gap: var(--layout-space-300);
+}
+
+.canvas-exp__canvas {
+  width: 100%;
+  border: 1px solid var(--color-grey-300);
+  border-radius: var(--layout-radius-400);
+  cursor: crosshair;
+  background: #fff;
+}
+
+/* 4. Live Code Editor */
+.code-editor-exp {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  border: 1px solid var(--color-grey-300);
+  border-radius: var(--layout-radius-400);
+  overflow: hidden;
+  background: #fff;
+}
+
+.code-editor-exp__lines {
+  padding: 0.55rem 0.42rem;
+  background: var(--color-grey-100);
+  color: var(--color-grey-400);
+  text-align: right;
+  font-family: monospace;
+  font-size: 0.825rem;
+  line-height: 1.5;
+  user-select: none;
+}
+
+.code-editor-exp__input {
+  padding: 0.55rem 0.76rem;
+  border: none;
+  outline: none;
+  font-family: monospace;
+  font-size: 0.825rem;
+  line-height: 1.5;
+  resize: none;
+  background: transparent;
+}
+
+/* 5. Audio Visualizer */
+.audio-viz-exp {
+  display: grid;
+  gap: var(--layout-space-300);
+}
+
+.audio-viz-exp__bars {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 0.3rem;
+  height: 4rem;
+}
+
+.audio-viz-exp__bar {
+  width: 0.5rem;
+  height: 20%;
+  background: var(--color-grey-500);
+  border-radius: var(--layout-radius-200);
+  transition: height 0.1s ease-out;
+}
+
+.audio-viz-exp--playing .audio-viz-exp__bar:nth-child(1) {
+  animation: audio-viz-pulse 0.8s ease-in-out infinite;
+}
+
+.audio-viz-exp--playing .audio-viz-exp__bar:nth-child(2) {
+  animation: audio-viz-pulse 0.9s ease-in-out infinite 0.1s;
+}
+
+.audio-viz-exp--playing .audio-viz-exp__bar:nth-child(3) {
+  animation: audio-viz-pulse 0.7s ease-in-out infinite 0.2s;
+}
+
+.audio-viz-exp--playing .audio-viz-exp__bar:nth-child(4) {
+  animation: audio-viz-pulse 1s ease-in-out infinite 0.3s;
+}
+
+.audio-viz-exp--playing .audio-viz-exp__bar:nth-child(5) {
+  animation: audio-viz-pulse 0.85s ease-in-out infinite 0.4s;
+}
+
+.audio-viz-exp--playing .audio-viz-exp__bar:nth-child(6) {
+  animation: audio-viz-pulse 0.95s ease-in-out infinite 0.5s;
+}
+
+.audio-viz-exp--playing .audio-viz-exp__bar:nth-child(7) {
+  animation: audio-viz-pulse 0.75s ease-in-out infinite 0.6s;
+}
+
+.audio-viz-exp--playing .audio-viz-exp__bar:nth-child(8) {
+  animation: audio-viz-pulse 0.88s ease-in-out infinite 0.7s;
+}
+
+@keyframes audio-viz-pulse {
+  0%,
+  100% {
+    height: 20%;
+  }
+  50% {
+    height: 80%;
+  }
+}
+
+/* 6. Swipe Cards */
+.swipe-cards-exp {
+  display: grid;
+  gap: var(--layout-space-300);
+}
+
+.swipe-cards-exp__card {
+  padding: 2rem;
+  border-radius: var(--layout-radius-500);
+  border: 1px solid var(--color-grey-300);
+  background: #fff;
+  text-align: center;
+  transition: transform 0.3s ease-out, opacity 0.3s;
+}
+
+.swipe-cards-exp__card.swipe-left {
+  transform: translateX(-120%) rotate(-15deg);
+  opacity: 0;
+}
+
+.swipe-cards-exp__card.swipe-right {
+  transform: translateX(120%) rotate(15deg);
+  opacity: 0;
+}
+
+.swipe-cards-exp__actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--layout-space-300);
+}
+
+.swipe-cards-exp__btn {
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  border: 1px solid var(--color-grey-300);
+  background: #fff;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: transform 0.15s;
+}
+
+.swipe-cards-exp__btn:hover {
+  transform: scale(1.1);
+}
+
+/* 7. Password Strength Meter */
+.password-strength-exp {
+  display: grid;
+  gap: var(--layout-space-200);
+}
+
+.password-strength-exp__input {
+  padding: 0.42rem 0.76rem;
+  border-radius: var(--layout-radius-400);
+  border: 1px solid var(--color-grey-300);
+  font: inherit;
+}
+
+.password-strength-exp__meter {
+  height: 0.4rem;
+  border-radius: var(--layout-radius-600);
+  background: var(--color-grey-200);
+  overflow: hidden;
+}
+
+.password-strength-exp__bar {
+  height: 100%;
+  width: 0%;
+  background: var(--color-grey-300);
+  transition: width 0.3s, background 0.3s;
+}
+
+.password-strength-exp--weak .password-strength-exp__bar {
+  width: 33%;
+  background: #e74c3c;
+}
+
+.password-strength-exp--medium .password-strength-exp__bar {
+  width: 66%;
+  background: #f39c12;
+}
+
+.password-strength-exp--strong .password-strength-exp__bar {
+  width: 100%;
+  background: #27ae60;
+}
+
+.password-strength-exp__label {
+  font-size: 0.825rem;
+  color: var(--color-grey-400);
+}
+
+/* 8. Emoji Picker */
+.emoji-picker-exp {
+  display: grid;
+  gap: var(--layout-space-300);
+}
+
+.emoji-picker-exp__panel {
+  display: none;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--layout-space-200);
+  padding: 0.55rem;
+  border: 1px solid var(--color-grey-300);
+  border-radius: var(--layout-radius-400);
+  background: #fff;
+}
+
+.emoji-picker-exp__panel.is-open {
+  display: grid;
+}
+
+.emoji-picker-exp__emoji {
+  padding: 0.55rem;
+  border: 1px solid var(--color-grey-200);
+  border-radius: var(--layout-radius-300);
+  background: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+
+.emoji-picker-exp__emoji:hover {
+  transform: scale(1.2);
+}
+
+.emoji-picker-exp__selected {
+  min-height: 2rem;
+  padding: 0.42rem;
+  border: 1px dashed var(--color-grey-300);
+  border-radius: var(--layout-radius-400);
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/* 9. Particle System */
+.particles-exp {
+  display: grid;
+  gap: var(--layout-space-300);
+}
+
+.particles-exp__container {
+  position: relative;
+  height: 6rem;
+  border: 1px dashed var(--color-grey-300);
+  border-radius: var(--layout-radius-400);
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background: var(--color-grey-500);
+  pointer-events: none;
+  animation: particle-float 1s ease-out forwards;
+}
+
+@keyframes particle-float {
+  to {
+    transform: translate(var(--tx), var(--ty));
+    opacity: 0;
+  }
+}
+
+/* 10. 3D Flip Card */
+.flip-card-exp {
+  perspective: 1000px;
+  min-height: 8rem;
+}
+
+.flip-card-exp__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 8rem;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.flip-card-exp__inner.flipped {
+  transform: rotateY(180deg);
+}
+
+.flip-card-exp__front,
+.flip-card-exp__back {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-grey-300);
+  border-radius: var(--layout-radius-400);
+  background: #fff;
+  backface-visibility: hidden;
+}
+
+.flip-card-exp__back {
+  transform: rotateY(180deg);
+  background: var(--color-grey-600);
+  color: #fff;
+}
+
+/* 11. Parallax Scroll */
+.parallax-exp {
+  position: relative;
+  height: 10rem;
+  border-radius: var(--layout-radius-400);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.parallax-exp__layer {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--layout-radius-400);
+}
+
+.parallax-exp__layer--back {
+  background: var(--color-grey-200);
+  transform: translateY(0);
+}
+
+.parallax-exp__layer--mid {
+  background: linear-gradient(to bottom, transparent, var(--color-grey-300));
+  transform: translateY(0);
+}
+
+.parallax-exp__layer--front {
+  background: linear-gradient(to bottom, transparent 50%, var(--color-grey-500));
+  transform: translateY(0);
+}
+
+.parallax-exp__content {
+  position: relative;
+  padding: 2rem 1rem;
+  color: #fff;
+  text-align: center;
+  z-index: 1;
+}
+
+/* 12. Morphing Button */
+.morph-btn-exp {
+  display: flex;
+  justify-content: center;
+}
+
+.morph-btn-exp__btn {
+  position: relative;
+  padding: 0.55rem 1.5rem;
+  border-radius: var(--layout-radius-600);
+  border: 1px solid var(--color-grey-300);
+  background: #fff;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.4s;
+}
+
+.morph-btn-exp__btn.morphed {
+  padding: 0.55rem;
+  border-radius: 50%;
+  background: #27ae60;
+  border-color: #27ae60;
+  color: #fff;
+}
+
+.morph-btn-exp__text {
+  transition: opacity 0.2s;
+}
+
+.morph-btn-exp__btn.morphed .morph-btn-exp__text {
+  opacity: 0;
+}
+
+.morph-btn-exp__icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.3s 0.1s;
+}
+
+.morph-btn-exp__btn.morphed .morph-btn-exp__icon {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* 13. Animated Counter */
+.counter-exp {
+  display: grid;
+  gap: var(--layout-space-300);
+  text-align: center;
+}
+
+.counter-exp__value {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1;
+  transition: transform 0.2s;
+}
+
+.counter-exp__value.bump {
+  animation: counter-bump 0.3s ease-out;
+}
+
+@keyframes counter-bump {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.counter-exp__controls {
+  display: flex;
+  justify-content: center;
+  gap: var(--layout-space-300);
+}
+
+.counter-exp__btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 1px solid var(--color-grey-300);
+  background: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+
+.counter-exp__btn:active {
+  transform: scale(0.9);
+}
+
+/* 14. Dual Range Slider */
+.dual-range-exp {
+  display: grid;
+  gap: var(--layout-space-300);
+}
+
+.dual-range-exp__track {
+  position: relative;
+  height: 0.4rem;
+  border-radius: var(--layout-radius-600);
+  background: var(--color-grey-200);
+}
+
+.dual-range-exp__range {
+  position: absolute;
+  height: 100%;
+  background: var(--color-grey-500);
+  border-radius: var(--layout-radius-600);
+}
+
+.dual-range-exp__input {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  appearance: none;
+  background: transparent;
+}
+
+.dual-range-exp__input::-webkit-slider-thumb {
+  appearance: none;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background: var(--color-grey-600);
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.dual-range-exp__input::-moz-range-thumb {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background: var(--color-grey-600);
+  cursor: pointer;
+  pointer-events: auto;
+  border: none;
+}
+
+.dual-range-exp__values {
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 15. Ripple Effect */
+.ripple-exp {
+  display: flex;
+  justify-content: center;
+}
+
+.ripple-exp__btn {
+  position: relative;
+  padding: 0.76rem 1.5rem;
+  border-radius: var(--layout-radius-600);
+  border: 1px solid var(--color-grey-300);
+  background: #fff;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  transform: scale(0);
+  animation: ripple-animation 0.6s ease-out;
+}
+
+@keyframes ripple-animation {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* 16. Skeleton Loader */
+.skeleton-exp {
+  display: grid;
+  gap: var(--layout-space-300);
+}
+
+.skeleton-exp__line {
+  height: 1rem;
+  border-radius: var(--layout-radius-300);
+  background: linear-gradient(90deg, var(--color-grey-200) 25%, var(--color-grey-300) 50%, var(--color-grey-200) 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s ease-in-out infinite;
+}
+
+.skeleton-exp__line--title {
+  width: 60%;
+  height: 1.5rem;
+}
+
+.skeleton-exp__line--text {
+  width: 100%;
+}
+
+.skeleton-exp--loaded .skeleton-exp__line {
+  animation: none;
+  background: var(--color-grey-100);
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* 17. Gradient Builder */
+.gradient-exp {
+  display: grid;
+  gap: var(--layout-space-300);
+}
+
+.gradient-exp__preview {
+  height: 4rem;
+  border-radius: var(--layout-radius-400);
+  background: linear-gradient(90deg, #3498db, #e74c3c);
+  transition: background 0.3s;
+}
+
+.gradient-exp__controls {
+  display: flex;
+  gap: var(--layout-space-300);
+}
+
+.gradient-exp__color {
+  flex: 1;
+  height: 2.5rem;
+  border: 1px solid var(--color-grey-300);
+  border-radius: var(--layout-radius-400);
+  cursor: pointer;
+}
+
+/* 18. Notification Stack */
+.notif-stack-exp {
+  display: grid;
+  gap: var(--layout-space-300);
+}
+
+.notif-stack-exp__container {
+  display: grid;
+  gap: var(--layout-space-200);
+  min-height: 4rem;
+}
+
+.notification-item {
+  padding: 0.55rem 0.76rem;
+  border-radius: var(--layout-radius-400);
+  background: var(--color-grey-700);
+  color: #fff;
+  animation: notif-slide-in 0.3s ease-out;
+}
+
+.notification-item.removing {
+  animation: notif-slide-out 0.3s ease-out forwards;
+}
+
+@keyframes notif-slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes notif-slide-out {
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+/* 19. Typewriter Effect */
+.typewriter-exp {
+  display: grid;
+  gap: var(--layout-space-300);
+}
+
+.typewriter-exp__text {
+  min-height: 3rem;
+  font-family: monospace;
+  font-size: 1rem;
+}
+
+.typewriter-exp__text::after {
+  content: "|";
+  animation: cursor-blink 1s step-end infinite;
+}
+
+.typewriter-exp__text.typing::after {
+  animation: cursor-blink 0.5s step-end infinite;
+}
+
+@keyframes cursor-blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* 20. Infinite Scroll */
+.infinite-scroll-exp__list {
+  max-height: 8rem;
+  overflow-y: auto;
+  border: 1px solid var(--color-grey-300);
+  border-radius: var(--layout-radius-400);
+  padding: 0.55rem;
+}
+
+.infinite-scroll-exp__item {
+  padding: 0.55rem;
+  border-bottom: 1px solid var(--color-grey-200);
+}
+
+.infinite-scroll-exp__item:last-child {
+  border-bottom: none;
+}
+
+.infinite-scroll-exp__loader {
+  text-align: center;
+  padding: 0.55rem;
+  color: var(--color-grey-400);
+  display: none;
+}
+
+.infinite-scroll-exp__loader.loading {
+  display: block;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
